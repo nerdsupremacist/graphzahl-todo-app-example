@@ -8,8 +8,6 @@
 
 import Foundation
 import LeoQL
-import GraphQL
-import NIO
 
 struct User : Object {
     let name: String
@@ -17,26 +15,38 @@ struct User : Object {
 
 struct Todo : Object {
     let title: String
+    let completed: Bool
     let author: User
 }
 
-enum MySchema: Schema {
-    struct Query : Object {
+var allTodos = [
+    Todo(title: "Learn GraphQL",
+         completed: true,
+         author: User(name: "Mathias")),
+    Todo(title: "Learn React",
+         completed: false,
+         author: User(name: "Paul")),
+]
+
+enum API: Schema {
+    typealias ViewerContext = Void
+
+    struct Query {
         let todos: [Todo]
     }
-    
-    typealias Mutation = Never
+
+    typealias Mutation = None
+}
+
+extension API.Query : QueryType {
+
+    init(viewerContext context: Void) {
+        todos = allTodos
+    }
+
 }
 
 do {
-    let schema = try MySchema.resolve()
-    let value = MySchema.Query(todos: [
-        Todo(title: "Learn GraphQL",
-             author: User(name: "Mathias")),
-        Todo(title: "Learn React",
-             author: User(name: "Paul")),
-    ])
-    
     let query = """
     query {
         todos {
@@ -47,8 +57,8 @@ do {
         }
     }
     """
-    let eventLoopGroup = MultiThreadedEventLoopGroup(numberOfThreads: 1)
-    let result = try graphql(schema: schema, request: query, rootValue: value, eventLoopGroup: eventLoopGroup).wait()
+
+    let result = try API.perform(request: query).wait()
     print(result)
 } catch {
     print(error)
