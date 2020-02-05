@@ -10,7 +10,9 @@ import Foundation
 import LeoQL
 
 struct User : Object {
-    let name: String
+    let firstname: String
+    let lastname: String
+    let email: String?
 }
 
 struct Todo : Object {
@@ -22,10 +24,10 @@ struct Todo : Object {
 var allTodos = [
     Todo(title: "Learn GraphQL",
          completed: true,
-         author: User(name: "Mathias")),
+         author: User(firstname: "Mathias", lastname: "Quintero", email: "me@quintero.io")),
     Todo(title: "Learn React",
          completed: false,
-         author: User(name: "Paul")),
+         author: User(firstname: "Paul", lastname: "Schmiedmayer", email: nil)),
 ]
 
 enum API: Schema {
@@ -52,7 +54,7 @@ do {
         todos {
             title
             author {
-                name
+                lastname
             }
         }
     }
