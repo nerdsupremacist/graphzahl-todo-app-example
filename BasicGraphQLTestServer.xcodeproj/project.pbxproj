@@ -27,6 +27,7 @@
 		0EB537DA23EA238B00CED911 /* BasicGraphQLTestServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BasicGraphQLTestServer; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB537DD23EA238C00CED911 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0EB537EC23EA30F500CED911 /* leoql */ = {isa = PBXFileReference; lastKnownFileType = folder; name = leoql; path = ../leoql; sourceTree = "<group>"; };
+		0EE35B8423F2821B00ADD6CC /* Runtime */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Runtime; path = ../Runtime; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +45,7 @@
 		0EB537D123EA238B00CED911 = {
 			isa = PBXGroup;
 			children = (
+				0EE35B8423F2821B00ADD6CC /* Runtime */,
 				0EB537EC23EA30F500CED911 /* leoql */,
 				0EB537DC23EA238B00CED911 /* BasicGraphQLTestServer */,
 				0EB537DB23EA238B00CED911 /* Products */,
@@ -96,7 +98,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Mathias Quintero";
 				TargetAttributes = {
 					0EB537D923EA238B00CED911 = {
@@ -253,6 +255,7 @@
 		0EB537E223EA238C00CED911 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KJPP698PR3;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -264,6 +267,7 @@
 		0EB537E323EA238C00CED911 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KJPP698PR3;
 				ENABLE_HARDENED_RUNTIME = YES;
