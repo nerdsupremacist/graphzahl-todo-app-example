@@ -9,43 +9,58 @@
 import Foundation
 import LeoQL
 
-struct User : Object {
+class User: Object {
     let firstname: String
     let lastname: String
     let email: String?
+
+    init(firstname: String,
+         lastname: String,
+         email: String?) {
+
+        self.firstname = firstname
+        self.lastname = lastname
+        self.email = email
+    }
+
+    func todos(first: Int) -> [Todo] {
+        return []
+    }
 }
 
-struct Todo : Object {
+class Todo: Object {
     let title: String
     let completed: Bool
-    let author: User
-}
 
-var allTodos = [
-    Todo(title: "Learn GraphQL",
-         completed: true,
-         author: User(firstname: "Mathias", lastname: "Quintero", email: "me@quintero.io")),
-    Todo(title: "Learn React",
-         completed: false,
-         author: User(firstname: "Paul", lastname: "Schmiedmayer", email: nil)),
-]
+    init(title: String, completed: Bool) {
+        self.title = title
+        self.completed = completed
+    }
+
+    func author() -> User {
+        return User(firstname: "Mathias", lastname: "Quintero", email: "me@quintero.io")
+    }
+}
 
 enum API: Schema {
     typealias ViewerContext = Void
 
-    struct Query {
-        let todos: [Todo]
+    class Query: QueryType {
+        func todos() -> [Todo] {
+            return [
+                Todo(title: "Learn GraphQL",
+                     completed: true),
+                Todo(title: "Learn React",
+                     completed: false),
+            ]
+        }
+
+        required convenience init(viewerContext context: Void) {
+            self.init()
+        }
     }
 
     typealias Mutation = None
-}
-
-extension API.Query : QueryType {
-
-    init(viewerContext context: Void) {
-        todos = allTodos
-    }
-
 }
 
 do {
@@ -55,6 +70,9 @@ do {
             title
             author {
                 lastname
+                todos(first: 1) {
+                    title
+                }
             }
         }
     }
