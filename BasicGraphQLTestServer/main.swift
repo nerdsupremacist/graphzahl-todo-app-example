@@ -1,10 +1,3 @@
-//
-//  main.swift
-//  BasicGraphQLTestServer
-//
-//  Created by Mathias Quintero on 04.02.20.
-//  Copyright © 2020 Mathias Quintero. All rights reserved.
-//
 
 import Foundation
 import LeoQL
@@ -23,7 +16,7 @@ class User: Object {
         self.email = email
     }
 
-    func todos(first: Int) -> [Todo] {
+    func todos() -> [Todo] {
         return []
     }
 }
@@ -46,7 +39,7 @@ enum API: Schema {
     typealias ViewerContext = Void
 
     class Query: QueryType {
-        func todos() -> [Todo] {
+        func todos(first: Int?, last: Int?, after: String?, before: String?) -> [Todo] {
             return [
                 Todo(title: "Learn GraphQL",
                      completed: true),
@@ -66,11 +59,11 @@ enum API: Schema {
 do {
     let query = """
     query {
-        todos {
+        todos(first: 5) {
             title
             author {
-                lastname
-                todos(first: 1) {
+                name
+                todos {
                     title
                 }
             }
