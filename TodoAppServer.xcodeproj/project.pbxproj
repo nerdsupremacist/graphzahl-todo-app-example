@@ -14,6 +14,8 @@
 		0EE598EB2406692100C8CEAB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE598EA2406692100C8CEAB /* API.swift */; };
 		0EE598EE240669DE00C8CEAB /* Vapor in Frameworks */ = {isa = PBXBuildFile; productRef = 0EE598ED240669DE00C8CEAB /* Vapor */; };
 		0EE598F22406741400C8CEAB /* Responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE598F12406741400C8CEAB /* Responder.swift */; };
+		0EE598F7240685D100C8CEAB /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE598F6240685D100C8CEAB /* Database.swift */; };
+		0EE598FA240689BE00C8CEAB /* FluentSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 0EE598F9240689BE00C8CEAB /* FluentSQLite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +39,7 @@
 		0EE598EF24066BD400C8CEAB /* leoql */ = {isa = PBXFileReference; lastKnownFileType = folder; name = leoql; path = ../leoql; sourceTree = "<group>"; };
 		0EE598F02406726700C8CEAB /* TodoAppServer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodoAppServer.entitlements; sourceTree = "<group>"; };
 		0EE598F12406741400C8CEAB /* Responder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responder.swift; sourceTree = "<group>"; };
+		0EE598F6240685D100C8CEAB /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +48,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EB537EB23EA2C5F00CED911 /* LeoQL in Frameworks */,
+				0EE598FA240689BE00C8CEAB /* FluentSQLite in Frameworks */,
 				0EE598EE240669DE00C8CEAB /* Vapor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +82,7 @@
 				0EE598E82406691600C8CEAB /* Todo.swift */,
 				0EE598F12406741400C8CEAB /* Responder.swift */,
 				0EE598E62406690800C8CEAB /* User.swift */,
+				0EE598F6240685D100C8CEAB /* Database.swift */,
 			);
 			path = TodoAppServer;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 			packageProductDependencies = (
 				0EB537EA23EA2C5F00CED911 /* LeoQL */,
 				0EE598ED240669DE00C8CEAB /* Vapor */,
+				0EE598F9240689BE00C8CEAB /* FluentSQLite */,
 			);
 			productName = BasicGraphQLTestServer;
 			productReference = 0EB537DA23EA238B00CED911 /* TodoAppServer */;
@@ -133,6 +139,7 @@
 			packageReferences = (
 				0EB537E923EA2C5F00CED911 /* XCRemoteSwiftPackageReference "leoql" */,
 				0EE598EC240669DE00C8CEAB /* XCRemoteSwiftPackageReference "vapor" */,
+				0EE598F8240689BE00C8CEAB /* XCRemoteSwiftPackageReference "fluent-sqlite" */,
 			);
 			productRefGroup = 0EB537DB23EA238B00CED911 /* Products */;
 			projectDirPath = "";
@@ -148,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EE598F7240685D100C8CEAB /* Database.swift in Sources */,
 				0EE598E72406690800C8CEAB /* User.swift in Sources */,
 				0EE598F22406741400C8CEAB /* Responder.swift in Sources */,
 				0EE598E92406691600C8CEAB /* Todo.swift in Sources */,
@@ -340,6 +348,14 @@
 				minimumVersion = 3.3.3;
 			};
 		};
+		0EE598F8240689BE00C8CEAB /* XCRemoteSwiftPackageReference "fluent-sqlite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vapor/fluent-sqlite";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -352,6 +368,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0EE598EC240669DE00C8CEAB /* XCRemoteSwiftPackageReference "vapor" */;
 			productName = Vapor;
+		};
+		0EE598F9240689BE00C8CEAB /* FluentSQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0EE598F8240689BE00C8CEAB /* XCRemoteSwiftPackageReference "fluent-sqlite" */;
+			productName = FluentSQLite;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

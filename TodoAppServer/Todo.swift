@@ -1,17 +1,27 @@
 
 import Foundation
 import LeoQL
+import Fluent
+import FluentSQLite
 
-class Todo: Object {
-    let title: String
-    let completed: Bool
+final class Todo: Object, SQLiteModel {
+    static let idKey: WritableKeyPath<Todo, Int?> = \.id
 
-    init(title: String, completed: Bool) {
-        self.title = title
-        self.completed = completed
+    var id: Int?
+
+    @Ignore
+    var authorID: Int
+
+    var title: String
+    var completed: Bool
+
+    var author: Parent<Todo, User> {
+        return parent(\.authorID)
     }
 
-    func author() -> User {
-        return User(firstname: "Mathias", lastname: "Quintero", email: "me@quintero.io")
+    init(authorID: Int, title: String, completed: Bool) {
+        self.authorID = authorID
+        self.title = title
+        self.completed = completed
     }
 }
