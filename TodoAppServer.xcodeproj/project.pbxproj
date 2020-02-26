@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		0EB537DE23EA238C00CED911 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB537DD23EA238C00CED911 /* main.swift */; };
 		0EB537EB23EA2C5F00CED911 /* LeoQL in Frameworks */ = {isa = PBXBuildFile; productRef = 0EB537EA23EA2C5F00CED911 /* LeoQL */; };
+		0EE598E72406690800C8CEAB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE598E62406690800C8CEAB /* User.swift */; };
+		0EE598E92406691600C8CEAB /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE598E82406691600C8CEAB /* Todo.swift */; };
+		0EE598EB2406692100C8CEAB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE598EA2406692100C8CEAB /* API.swift */; };
+		0EE598EE240669DE00C8CEAB /* Vapor in Frameworks */ = {isa = PBXBuildFile; productRef = 0EE598ED240669DE00C8CEAB /* Vapor */; };
+		0EE598F22406741400C8CEAB /* Responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE598F12406741400C8CEAB /* Responder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,10 +29,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0E563D8F23F8A9C700C7A6AE /* Runtime */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Runtime; path = ../Runtime; sourceTree = "<group>"; };
-		0EB537DA23EA238B00CED911 /* BasicGraphQLTestServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BasicGraphQLTestServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EB537DA23EA238B00CED911 /* TodoAppServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TodoAppServer; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB537DD23EA238C00CED911 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		0EB537EC23EA30F500CED911 /* leoql */ = {isa = PBXFileReference; lastKnownFileType = folder; name = leoql; path = ../leoql; sourceTree = "<group>"; };
+		0EE598E62406690800C8CEAB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0EE598E82406691600C8CEAB /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		0EE598EA2406692100C8CEAB /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		0EE598EF24066BD400C8CEAB /* leoql */ = {isa = PBXFileReference; lastKnownFileType = folder; name = leoql; path = ../leoql; sourceTree = "<group>"; };
+		0EE598F02406726700C8CEAB /* TodoAppServer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodoAppServer.entitlements; sourceTree = "<group>"; };
+		0EE598F12406741400C8CEAB /* Responder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EB537EB23EA2C5F00CED911 /* LeoQL in Frameworks */,
+				0EE598EE240669DE00C8CEAB /* Vapor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,9 +55,8 @@
 		0EB537D123EA238B00CED911 = {
 			isa = PBXGroup;
 			children = (
-				0E563D8F23F8A9C700C7A6AE /* Runtime */,
-				0EB537EC23EA30F500CED911 /* leoql */,
-				0EB537DC23EA238B00CED911 /* BasicGraphQLTestServer */,
+				0EE598EF24066BD400C8CEAB /* leoql */,
+				0EB537DC23EA238B00CED911 /* TodoAppServer */,
 				0EB537DB23EA238B00CED911 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,25 +64,30 @@
 		0EB537DB23EA238B00CED911 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0EB537DA23EA238B00CED911 /* BasicGraphQLTestServer */,
+				0EB537DA23EA238B00CED911 /* TodoAppServer */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0EB537DC23EA238B00CED911 /* BasicGraphQLTestServer */ = {
+		0EB537DC23EA238B00CED911 /* TodoAppServer */ = {
 			isa = PBXGroup;
 			children = (
+				0EE598F02406726700C8CEAB /* TodoAppServer.entitlements */,
 				0EB537DD23EA238C00CED911 /* main.swift */,
+				0EE598EA2406692100C8CEAB /* API.swift */,
+				0EE598E82406691600C8CEAB /* Todo.swift */,
+				0EE598F12406741400C8CEAB /* Responder.swift */,
+				0EE598E62406690800C8CEAB /* User.swift */,
 			);
-			path = BasicGraphQLTestServer;
+			path = TodoAppServer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0EB537D923EA238B00CED911 /* BasicGraphQLTestServer */ = {
+		0EB537D923EA238B00CED911 /* TodoAppServer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EB537E123EA238C00CED911 /* Build configuration list for PBXNativeTarget "BasicGraphQLTestServer" */;
+			buildConfigurationList = 0EB537E123EA238C00CED911 /* Build configuration list for PBXNativeTarget "TodoAppServer" */;
 			buildPhases = (
 				0EB537D623EA238B00CED911 /* Sources */,
 				0EB537D723EA238B00CED911 /* Frameworks */,
@@ -83,12 +97,13 @@
 			);
 			dependencies = (
 			);
-			name = BasicGraphQLTestServer;
+			name = TodoAppServer;
 			packageProductDependencies = (
 				0EB537EA23EA2C5F00CED911 /* LeoQL */,
+				0EE598ED240669DE00C8CEAB /* Vapor */,
 			);
 			productName = BasicGraphQLTestServer;
-			productReference = 0EB537DA23EA238B00CED911 /* BasicGraphQLTestServer */;
+			productReference = 0EB537DA23EA238B00CED911 /* TodoAppServer */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -106,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0EB537D523EA238B00CED911 /* Build configuration list for PBXProject "BasicGraphQLTestServer" */;
+			buildConfigurationList = 0EB537D523EA238B00CED911 /* Build configuration list for PBXProject "TodoAppServer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,12 +132,13 @@
 			mainGroup = 0EB537D123EA238B00CED911;
 			packageReferences = (
 				0EB537E923EA2C5F00CED911 /* XCRemoteSwiftPackageReference "leoql" */,
+				0EE598EC240669DE00C8CEAB /* XCRemoteSwiftPackageReference "vapor" */,
 			);
 			productRefGroup = 0EB537DB23EA238B00CED911 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0EB537D923EA238B00CED911 /* BasicGraphQLTestServer */,
+				0EB537D923EA238B00CED911 /* TodoAppServer */,
 			);
 		};
 /* End PBXProject section */
@@ -132,6 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EE598E72406690800C8CEAB /* User.swift in Sources */,
+				0EE598F22406741400C8CEAB /* Responder.swift in Sources */,
+				0EE598E92406691600C8CEAB /* Todo.swift in Sources */,
+				0EE598EB2406692100C8CEAB /* API.swift in Sources */,
 				0EB537DE23EA238C00CED911 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,10 +275,12 @@
 		0EB537E223EA238C00CED911 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = TodoAppServer/TodoAppServer.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KJPP698PR3;
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.quintero.todo-server";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -267,10 +289,12 @@
 		0EB537E323EA238C00CED911 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = TodoAppServer/TodoAppServer.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KJPP698PR3;
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.quintero.todo-server";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -279,7 +303,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0EB537D523EA238B00CED911 /* Build configuration list for PBXProject "BasicGraphQLTestServer" */ = {
+		0EB537D523EA238B00CED911 /* Build configuration list for PBXProject "TodoAppServer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EB537DF23EA238C00CED911 /* Debug */,
@@ -288,7 +312,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EB537E123EA238C00CED911 /* Build configuration list for PBXNativeTarget "BasicGraphQLTestServer" */ = {
+		0EB537E123EA238C00CED911 /* Build configuration list for PBXNativeTarget "TodoAppServer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EB537E223EA238C00CED911 /* Debug */,
@@ -308,6 +332,14 @@
 				kind = branch;
 			};
 		};
+		0EE598EC240669DE00C8CEAB /* XCRemoteSwiftPackageReference "vapor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vapor/vapor.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -315,6 +347,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0EB537E923EA2C5F00CED911 /* XCRemoteSwiftPackageReference "leoql" */;
 			productName = LeoQL;
+		};
+		0EE598ED240669DE00C8CEAB /* Vapor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0EE598EC240669DE00C8CEAB /* XCRemoteSwiftPackageReference "vapor" */;
+			productName = Vapor;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
