@@ -1,25 +1,17 @@
 
 import Foundation
 import Vapor
-import FluentSQLite
+import FluentSQLiteDriver
 import LeoQL
 import VaporLeo
 
-var services = Services.default()
-let sqlite = try SQLiteDatabase(storage: .file(path: "db.sqlite"))
+let app = Application()
 
-/// Register the configured SQLite database to the database config.
-var databases = DatabasesConfig()
-databases.add(database: sqlite, as: .sqlite)
-services.register(databases)
+let sqliteConfig = SQLiteConfiguration(storage: .file(path: "db.sqlite"))
+let databaseConfigFactory = DatabaseConfigurationFactory.sqlite(sqliteConfig)
+app.databases.use(databaseConfigFactory, as: .sqlite)
+app.databases.default(to: .sqlite)
 
-let app = try Application(services: services)
-let router = try app.make(Router.self)
-
-router.graphql(path: "graphql", use: API.self) { (request: Request) in
-    return request
-        .databaseConnection(to: .sqlite)
-        .map { $0 as DatabaseConnectable }
-}
+app.routes.graphql(path: "graphql", use: API.self) { $0 }
 
 try app.run()

@@ -1,23 +1,22 @@
 
 import Foundation
 import LeoQL
+import Vapor
+import NIO
 import Fluent
 
-enum API: Schema {
-    typealias ViewerContext = DatabaseConnectable
+enum API: LeoQL.Schema {
+    typealias ViewerContext = Request
 
     class Query: QueryType {
-        let context: DatabaseConnectable
+        let request: Request
 
-        func todos() -> Future<[Todo]> {
-            return TodoModel
-                .query(on: context)
-                .all()
-                .map { $0.map { Todo(connectable: self.context, todo: $0) } }
+        func todos() -> QueryBuilder<Todo> {
+            return Todo.query(on: request.db)
         }
 
-        required init(viewerContext context: DatabaseConnectable) {
-            self.context = context
+        required init(viewerContext request: Request) {
+            self.request = request
         }
     }
 
