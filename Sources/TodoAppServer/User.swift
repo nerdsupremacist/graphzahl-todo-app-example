@@ -4,19 +4,23 @@ import LeoQL
 import Fluent
 import FluentSQLiteDriver
 
-final class User: Object, Model {
+class User: Object, Model {
     static var schema: String = "user"
 
-    var id: Int?
+    @ID
+    var id: UUID?
 
+    @Field(key: "firstname")
     var firstname: String?
 
+    @Field(key: "lastname")
     var lastname: String?
 
-    var email: String = ""
+    @Field(key: "email")
+    var email: String
 
     @Children(for: \Todo.$author)
     var todos: [Todo]
 
-    init() { }
+    required init() { }
 }

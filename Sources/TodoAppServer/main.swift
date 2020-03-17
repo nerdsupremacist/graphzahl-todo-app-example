@@ -12,6 +12,6 @@ let databaseConfigFactory = DatabaseConfigurationFactory.sqlite(sqliteConfig)
 app.databases.use(databaseConfigFactory, as: .sqlite)
 app.databases.default(to: .sqlite)
 
-app.routes.graphql(path: "graphql", use: API.self) { $0 }
+app.routes.graphql(path: "graphql", use: API.self, includeGraphiQL: true) { $0 }
 
 try app.run()

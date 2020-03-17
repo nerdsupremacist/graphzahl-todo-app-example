@@ -15,6 +15,10 @@ enum API: LeoQL.Schema {
             return Todo.query(on: request.db)
         }
 
+        func users() -> QueryBuilder<User> {
+            return User.query(on: request.db)
+        }
+
         required init(viewerContext request: Request) {
             self.request = request
         }

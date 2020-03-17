@@ -4,15 +4,20 @@ import LeoQL
 import Fluent
 import FluentSQLiteDriver
 
-final class Todo: Object, Model {
+class Todo: Object, Model {
     static var schema: String = "todo"
 
-    var id: Int?
+    @ID
+    var id: UUID?
 
-    var title: String = ""
+    @Field(key: "title")
+    var title: String
 
-    var completed: Bool = false
+    @Field(key: "completed")
+    var completed: Bool
 
     @Parent(key: "authorID")
     var author: User
+
+    required init() {}
 }
