@@ -4,7 +4,7 @@ import LeoQL
 import Fluent
 import FluentSQLiteDriver
 
-class Todo: Object, Model {
+class Todo: GraphQLObject, Model {
     static var schema: String = "todo"
 
     @ID

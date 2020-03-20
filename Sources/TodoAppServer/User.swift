@@ -4,11 +4,14 @@ import LeoQL
 import Fluent
 import FluentSQLiteDriver
 
-class User: Object, Model {
+class User: GraphQLObject, Model {
     static var schema: String = "user"
 
     @ID
     var id: UUID?
+
+    @Field(key: "role")
+    var role: UserRole
 
     @Field(key: "firstname")
     var firstname: String?
