@@ -1,6 +1,6 @@
 
 import Foundation
-import LeoQL
+import GraphZahl
 
 enum UserRole: String, GraphQLEnum, Codable {
     case admin

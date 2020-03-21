@@ -29,6 +29,15 @@
         }
       },
       {
+        "package": "ContextKit",
+        "repositoryURL": "https://github.com/nerdsupremacist/ContextKit.git",
+        "state": {
+          "branch": "master",
+          "revision": "fe6a135c1f58b7115d4f524f1224036a3de0a852",
+          "version": null
+        }
+      },
+      {
         "package": "CRuntime",
         "repositoryURL": "https://github.com/nerdsupremacist/CRuntime.git",
         "state": {
@@ -83,11 +92,29 @@
         }
       },
       {
-        "package": "LeoQL",
-        "repositoryURL": "https://bitbucket.ase.in.tum.de/scm/mmq/leoql.git",
+        "package": "GraphZahl",
+        "repositoryURL": "https://github.com/nerdsupremacist/GraphZahl.git",
         "state": {
           "branch": "master",
-          "revision": "18c2f362f4925a48260651a1df28b15ee24c8b96",
+          "revision": "c0ef1845190276446b6e223b73c251b5a4b97ca0",
+          "version": null
+        }
+      },
+      {
+        "package": "graphzahl-fluent-support",
+        "repositoryURL": "https://github.com/nerdsupremacist/graphzahl-fluent-support.git",
+        "state": {
+          "branch": "master",
+          "revision": "84a7ab8517d87b28126afb2b7d425d4e2a39a7e7",
+          "version": null
+        }
+      },
+      {
+        "package": "graphzahl-vapor-support",
+        "repositoryURL": "https://github.com/nerdsupremacist/graphzahl-vapor-support.git",
+        "state": {
+          "branch": "master",
+          "revision": "3343fc8e738594caba0d087a0108bf78a56ba18d",
           "version": null
         }
       },
@@ -105,7 +132,7 @@
         "repositoryURL": "https://github.com/nerdsupremacist/Runtime.git",
         "state": {
           "branch": "master",
-          "revision": "974c7d2fb2156df0b8ca140c12e7f4c82c0a2566",
+          "revision": "b365cfb86c24ad31ffbc5690e604dbc98a7417eb",
           "version": null
         }
       },
@@ -213,8 +240,8 @@
         "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
-          "revision": "57398ebf41376c0e4953e661e03b3c01224bea21",
-          "version": "4.0.0-rc.3.5"
+          "revision": "c113c4b4e9a1dae3878e38af39c9d45ea88dec73",
+          "version": "4.0.0-rc.3.7"
         }
       },
       {

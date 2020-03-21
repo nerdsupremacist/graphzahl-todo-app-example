@@ -2,8 +2,9 @@
 import Foundation
 import Vapor
 import FluentSQLiteDriver
-import LeoQL
-import VaporLeo
+import GraphZahl
+import GraphZahlVaporSupport
+import GraphZahlFluentSupport
 
 let app = Application()
 
@@ -12,7 +13,8 @@ let databaseConfigFactory = DatabaseConfigurationFactory.sqlite(sqliteConfig)
 app.databases.use(databaseConfigFactory, as: .sqlite)
 app.databases.default(to: .sqlite)
 
+app.migrations.add(User.Migration())
+app.migrations.add(Todo.Migration())
 
 app.routes.graphql(use: API.self, includeGraphiQL: true) { $0.db }
-
 try app.run()

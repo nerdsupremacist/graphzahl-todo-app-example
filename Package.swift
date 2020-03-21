@@ -11,11 +11,12 @@ let package = Package(
                     targets: ["TodoAppServer"]),
     ],
     dependencies: [
-        .package(url: "https://bitbucket.ase.in.tum.de/scm/mmq/leoql.git", .branch("master")),
+        .package(url: "https://github.com/nerdsupremacist/graphzahl-fluent-support.git", .branch("master")),
+        .package(url: "https://github.com/nerdsupremacist/graphzahl-vapor-support.git", .branch("master")),
         .package(url: "https://github.com/vapor/fluent-sqlite-driver.git", from: "4.0.0-beta."),
     ],
     targets: [
         .target(name: "TodoAppServer",
-                dependencies: ["FluentLeo", "FluentSQLiteDriver"]),
+                dependencies: ["GraphZahlFluentSupport", "GraphZahlVaporSupport", "FluentSQLiteDriver"]),
     ]
 )

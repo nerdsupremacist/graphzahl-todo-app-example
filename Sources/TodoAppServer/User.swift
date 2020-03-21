@@ -1,6 +1,6 @@
 
 import Foundation
-import LeoQL
+import GraphZahl
 import Fluent
 import FluentSQLiteDriver
 
@@ -13,11 +13,8 @@ class User: GraphQLObject, Model {
     @Field(key: "role")
     var role: UserRole
 
-    @Field(key: "firstname")
-    var firstname: String?
-
-    @Field(key: "lastname")
-    var lastname: String?
+    @Field(key: "name")
+    var name: String?
 
     @Field(key: "email")
     var email: String
@@ -26,4 +23,31 @@ class User: GraphQLObject, Model {
     var todos: [Todo]
 
     required init() { }
+}
+
+extension User {
+
+    struct Migration: Fluent.Migration {
+        var name: String {
+            return "UserMigration"
+        }
+
+        func prepare(on database: Database) -> EventLoopFuture<Void> {
+            return database
+                .schema(User.schema)
+                .id()
+                .field("role", .string, .required)
+                .field("name", .string)
+                .field("email", .string, .required)
+                .create()
+        }
+
+        func revert(on database: Database) -> EventLoopFuture<Void> {
+            return database
+                .schema(User.schema)
+                .delete()
+        }
+
+    }
+
 }
