@@ -58,7 +58,7 @@ enum API: GraphQLSchema {
             return todo.create(on: database).map { todo }
         }
 
-        func registerUser(email: String, name: String?, role: UserRole = .user) -> EventLoopFuture<User> {
+        func registerUser(email: String, name: String?, role: UserRole) -> EventLoopFuture<User> {
             let user = User()
             user.email = email
             user.name = name

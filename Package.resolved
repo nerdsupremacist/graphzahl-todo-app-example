@@ -29,6 +29,33 @@
         }
       },
       {
+        "package": "ContextKit",
+        "repositoryURL": "https://github.com/nerdsupremacist/ContextKit.git",
+        "state": {
+          "branch": null,
+          "revision": "fe6a135c1f58b7115d4f524f1224036a3de0a852",
+          "version": "0.1.0"
+        }
+      },
+      {
+        "package": "CRuntime",
+        "repositoryURL": "https://github.com/nerdsupremacist/CRuntime.git",
+        "state": {
+          "branch": null,
+          "revision": "95f911318d8c885f6fc05e971471f94adfd39405",
+          "version": "2.1.2"
+        }
+      },
+      {
+        "package": "CwlDemangle",
+        "repositoryURL": "https://github.com/mattgallagher/CwlDemangle.git",
+        "state": {
+          "branch": null,
+          "revision": "b268c08207d2990664605c49b2c71cbd0df3445b",
+          "version": "0.1.0"
+        }
+      },
+      {
         "package": "fluent",
         "repositoryURL": "https://github.com/vapor/fluent.git",
         "state": {
@@ -56,11 +83,20 @@
         }
       },
       {
+        "package": "GraphQL",
+        "repositoryURL": "https://github.com/nerdsupremacist/GraphQL.git",
+        "state": {
+          "branch": null,
+          "revision": "649b14846a49f6fc5905cb0b287b84ca22c4c867",
+          "version": "0.12.1-beta.2"
+        }
+      },
+      {
         "package": "GraphZahl",
         "repositoryURL": "https://github.com/nerdsupremacist/GraphZahl.git",
         "state": {
           "branch": null,
-          "revision": "cc2bd5e688bbf56a40cebaaeaa5cb23104b9888e",
+          "revision": "c9fd863c4b9d97d626a79e4574f1515789240bd5",
           "version": "0.1.0-alpha.1"
         }
       },
@@ -69,7 +105,7 @@
         "repositoryURL": "https://github.com/nerdsupremacist/graphzahl-fluent-support.git",
         "state": {
           "branch": null,
-          "revision": "8fd95c120ed2f5e9ab615810b40b211fed36447e",
+          "revision": "9823d51e22dd75a451191521ecbb08e34c6ef93c",
           "version": "0.1.0-alpha.1"
         }
       },
@@ -78,7 +114,7 @@
         "repositoryURL": "https://github.com/nerdsupremacist/graphzahl-vapor-support.git",
         "state": {
           "branch": null,
-          "revision": "19f7b32089c7b43475046a4a5e3f150c36583ada",
+          "revision": "00c04461350fc407de9813ae21c43c3aa489fef5",
           "version": "0.1.0-alpha.1"
         }
       },
@@ -89,6 +125,15 @@
           "branch": null,
           "revision": "dbc3eafdbe243e9a46eeb6fd7d99266bee52f89f",
           "version": "4.0.0-rc.1"
+        }
+      },
+      {
+        "package": "Runtime",
+        "repositoryURL": "https://github.com/nerdsupremacist/Runtime.git",
+        "state": {
+          "branch": null,
+          "revision": "64c026751ec24bdb69320a31ec933063b7b07cb7",
+          "version": "2.1.2-beta.1"
         }
       },
       {
