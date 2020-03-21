@@ -4,15 +4,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "TodoAppServer",
+    name: "graphzahl-todo-app-example",
     platforms: [.macOS(.v10_15)],
     products: [
         .executable(name: "TodoAppServer",
                     targets: ["TodoAppServer"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/nerdsupremacist/graphzahl-fluent-support.git", .branch("master")),
-        .package(url: "https://github.com/nerdsupremacist/graphzahl-vapor-support.git", .branch("master")),
+        .package(url: "https://github.com/nerdsupremacist/graphzahl-fluent-support.git", from: "0.1.0-alpha."),
+        .package(url: "https://github.com/nerdsupremacist/graphzahl-vapor-support.git", from: "0.1.0-alpha."),
         .package(url: "https://github.com/vapor/fluent-sqlite-driver.git", from: "4.0.0-beta."),
     ],
     targets: [

@@ -29,33 +29,6 @@
         }
       },
       {
-        "package": "ContextKit",
-        "repositoryURL": "https://github.com/nerdsupremacist/ContextKit.git",
-        "state": {
-          "branch": "master",
-          "revision": "fe6a135c1f58b7115d4f524f1224036a3de0a852",
-          "version": null
-        }
-      },
-      {
-        "package": "CRuntime",
-        "repositoryURL": "https://github.com/nerdsupremacist/CRuntime.git",
-        "state": {
-          "branch": "master",
-          "revision": "1ad0c05e0d2bc83546df2c7883eb33dbc3678d4c",
-          "version": null
-        }
-      },
-      {
-        "package": "CwlDemangle",
-        "repositoryURL": "https://github.com/mattgallagher/CwlDemangle.git",
-        "state": {
-          "branch": "master",
-          "revision": "b268c08207d2990664605c49b2c71cbd0df3445b",
-          "version": null
-        }
-      },
-      {
         "package": "fluent",
         "repositoryURL": "https://github.com/vapor/fluent.git",
         "state": {
@@ -83,39 +56,30 @@
         }
       },
       {
-        "package": "GraphQL",
-        "repositoryURL": "https://github.com/nerdsupremacist/GraphQL.git",
-        "state": {
-          "branch": "master",
-          "revision": "d4213633506dfc766a7d8f343772052b1ecf847d",
-          "version": null
-        }
-      },
-      {
         "package": "GraphZahl",
         "repositoryURL": "https://github.com/nerdsupremacist/GraphZahl.git",
         "state": {
-          "branch": "master",
-          "revision": "c0ef1845190276446b6e223b73c251b5a4b97ca0",
-          "version": null
+          "branch": null,
+          "revision": "cc2bd5e688bbf56a40cebaaeaa5cb23104b9888e",
+          "version": "0.1.0-alpha.1"
         }
       },
       {
         "package": "graphzahl-fluent-support",
         "repositoryURL": "https://github.com/nerdsupremacist/graphzahl-fluent-support.git",
         "state": {
-          "branch": "master",
-          "revision": "84a7ab8517d87b28126afb2b7d425d4e2a39a7e7",
-          "version": null
+          "branch": null,
+          "revision": "8fd95c120ed2f5e9ab615810b40b211fed36447e",
+          "version": "0.1.0-alpha.1"
         }
       },
       {
         "package": "graphzahl-vapor-support",
         "repositoryURL": "https://github.com/nerdsupremacist/graphzahl-vapor-support.git",
         "state": {
-          "branch": "master",
-          "revision": "3343fc8e738594caba0d087a0108bf78a56ba18d",
-          "version": null
+          "branch": null,
+          "revision": "19f7b32089c7b43475046a4a5e3f150c36583ada",
+          "version": "0.1.0-alpha.1"
         }
       },
       {
@@ -125,15 +89,6 @@
           "branch": null,
           "revision": "dbc3eafdbe243e9a46eeb6fd7d99266bee52f89f",
           "version": "4.0.0-rc.1"
-        }
-      },
-      {
-        "package": "Runtime",
-        "repositoryURL": "https://github.com/nerdsupremacist/Runtime.git",
-        "state": {
-          "branch": "master",
-          "revision": "b365cfb86c24ad31ffbc5690e604dbc98a7417eb",
-          "version": null
         }
       },
       {
@@ -222,8 +177,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio-http2.git",
         "state": {
           "branch": null,
-          "revision": "6970de5512cb3b3d094986f0f80e87fe6a1110a0",
-          "version": "1.10.0"
+          "revision": "82eb3fa0974b838358ee46bc6c5381e5ae5de6b9",
+          "version": "1.11.0"
         }
       },
       {
